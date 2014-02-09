@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<header class="sixteen columns">
+  <h1><%= @person.first_name%> <%= @person.last_name%></h1>
+  <h2>This is my cv</h2>
+</header>
 
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
+<div class="nav">
+  <ul>
+    <li><a href="#">Home</li></a>
+  <li><a href="#">About</li></a>
+<li><a href="#">Contact</li></a>
+  </ul>
+</div><!-- close nav -->
 
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
+<div class="image">
+<img src=href"http://www.placekitten.com/700/300">
+</div> <!-- close image -->
 
-<p>
-  <strong>Description:</strong>
-  <%= @person.description %>
-</p>
+<div class="about sixteen columns">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin massa id dui molestie, dignissim dictum arcu vehicula. Donec dictum facilisis ullamcorper. Phasellus vulputate nisi et lacus luctus, ac bibendum mi euismod. Fusce pulvinar porttitor felis sit amet venenatis. 
+  </p>
+</div><!-- closed about -->
 
-<p>
-  <strong>Email:</strong>
-  <%= @person.email %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @person.phone_number %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @person.active %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<div class="info">
+<div class="contact nine columns">
+  <h3>Contact</h3>
+  <ul>
+    <li><a href="#">
+      <%= @person.email %></a>
+    </li>
+    <li><a href="#">
+      <%= @person.phone_number %></a>
+    </li>
+    
+  </ul>
+  
+  </div><!-- closed contact -->
+  
+  <div class="links seven columns">
+    <h3>Links</h3>
+    <%= link_to "All people", people_path %>
+    <%= link_to "Edit Person", edit_person_path(@person) %>
+  </div>
+</div> <!-- closed info -->
